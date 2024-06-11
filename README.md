@@ -14,7 +14,7 @@ It is designed to focus on cleanliness and performance and allows for either a h
 You can install the `PriorityQueue` module via npm:
 
 ```bash
-npm install priority-queue-ts
+npm install @grinstead/priority-queue
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ Here is a basic example of how to use the `PriorityQueue`:
 ### Importing the Module
 
 ```typescript
-import { PriorityQueue } from "priority-queue-ts";
+import { PriorityQueue } from "@grinstead/priority-queue";
 ```
 
 ### Creating a Priority Queue
