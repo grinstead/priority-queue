@@ -1,8 +1,8 @@
 {
   "name": "@grinstead/priority-queue",
   "author": "Joe Grinstead <npm@mailforce.net>",
-  "private": false,
-  "version": "1.0.4",
+  "version": "1.0.5",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A performance-oriented PriorityQueue implementation for javascript",
