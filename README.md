@@ -32,13 +32,13 @@ import { PriorityQueue } from "@grinstead/priority-queue";
 By default, the priority queue returns the highest priority item first:
 
 ```typescript
-const pq = new PriorityQueue<number>();
+const queue = new PriorityQueue<number>();
 ```
 
 You can create a priority queue that returns the lowest priority item first by passing `true` to the constructor:
 
 ```typescript
-const pq = new PriorityQueue<number>(true);
+const queue = new PriorityQueue<number>(true);
 ```
 
 ### Adding Items
@@ -46,8 +46,8 @@ const pq = new PriorityQueue<number>(true);
 You can add items to the queue using the `add` method, which takes a priority and the item:
 
 ```typescript
-pq.add(1, "low priority item");
-pq.add(10, "high priority item");
+queue.add(1, "low priority item");
+queue.add(10, "high priority item");
 ```
 
 ### Peeking at the Highest Priority Item
@@ -55,7 +55,7 @@ pq.add(10, "high priority item");
 The `peek` method returns the item with the highest priority without removing it from the queue:
 
 ```typescript
-console.log(pq.peek()); // Outputs: 'high priority item'
+console.log(queue.peek()); // Outputs: 'high priority item'
 ```
 
 ### Peeking at the Priority of the Highest Priority Item
@@ -63,7 +63,7 @@ console.log(pq.peek()); // Outputs: 'high priority item'
 The `peekPriority` method returns the priority of the item with the highest priority without removing it from the queue:
 
 ```typescript
-console.log(pq.peekPriority()); // Outputs: 10
+console.log(queue.peekPriority()); // Outputs: 10
 ```
 
 ### Removing the Highest Priority Item
@@ -71,8 +71,8 @@ console.log(pq.peekPriority()); // Outputs: 10
 The `poll` method returns and removes the item with the highest priority:
 
 ```typescript
-console.log(pq.poll()); // Outputs: 'high priority item'
-console.log(pq.peek()); // Outputs: 'low priority item'
+console.log(queue.poll()); // Outputs: 'high priority item'
+console.log(queue.peek()); // Outputs: 'low priority item'
 ```
 
 ## API
