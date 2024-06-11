@@ -1,6 +1,6 @@
 {
   "name": "@grinstead/priority-queue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A performance-oriented PriorityQueue implementation for javascript",
