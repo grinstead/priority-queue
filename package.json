@@ -1,6 +1,5 @@
 {
   "name": "@grinstead/priority-queue",
-  "public": true,
   "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +12,7 @@
     "dist"
   ],
   "keywords": [
-    "bun"
+    "PriorityQueue"
   ],
   "license": "MIT",
   "homepage": "https://github.com/grinstead/priority-queue#readme",
