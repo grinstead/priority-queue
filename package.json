@@ -1,6 +1,8 @@
 {
   "name": "@grinstead/priority-queue",
-  "version": "1.0.3",
+  "author": "Joe Grinstead <npm@mailforce.net>",
+  "private": false,
+  "version": "1.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A performance-oriented PriorityQueue implementation for javascript",
@@ -21,7 +23,6 @@
     "url": "git+https://github.com/grinstead/priority-queue.git"
   },
   "bugs": "https://github.com/grinstead/priority-queue/issues",
-  "author": "Joe Grinstead <npm@mailforce.net>",
   "devDependencies": {
     "bun-plugin-dts": "^0.2.1",
     "@types/bun": "^1.0.0",
