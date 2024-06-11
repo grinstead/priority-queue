@@ -1,9 +1,9 @@
 {
-  "name": "priority-queue",
-  "version": "0.0.0",
+  "name": "@grinstead/priority-queue",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "description": "",
+  "description": "A performance-oriented PriorityQueue implementation for javascript",
   "scripts": {
     "build": "bun run build.mjs",
     "prepublishOnly": "bun run build"
@@ -15,13 +15,13 @@
     "bun"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/wobsoriano/pkg-name#readme",
+  "homepage": "https://github.com/grinstead/priority-queue#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wobsoriano/pkg-name.git"
+    "url": "git+https://github.com/grinstead/priority-queue.git"
   },
-  "bugs": "https://github.com/wobsoriano/pkg-name/issues",
-  "author": "Robert Soriano <sorianorobertc@gmail.com>",
+  "bugs": "https://github.com/grinstead/priority-queue/issues",
+  "author": "Joe Grinstead <npm@mailforce.net>",
   "devDependencies": {
     "bun-plugin-dts": "^0.2.1",
     "@types/bun": "^1.0.0",
