@@ -1,7 +1,7 @@
 {
   "name": "@grinstead/priority-queue",
   "author": "Joe Grinstead <npm@mailforce.net>",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
