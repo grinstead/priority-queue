@@ -3,9 +3,14 @@
 A Priority Queue implementation in TypeScript that uses numeric priorities.
 It is designed to focus on cleanliness and performance and allows for either a highest priority first or a lowest priority first queue based on the what is passed to the constructor.
 
+Internal benchmarking shows this is faster than [fastpriorityqueue](https://www.npmjs.com/package/fastpriorityqueue). The speedup primarily comes from explicitly passing a numeric priority into the queue instead of using a comparator to sort items.
+
+This is not currently feature rich, though requests on the github are welcome.
+
 ## Features
 
 - O(log n) insertion and removal.
+- O(1) peek
 - Supports negative and fractional priorities.
 - Configurable for either highest or lowest priority first.
 
@@ -32,13 +37,13 @@ import { PriorityQueue } from "@grinstead/priority-queue";
 By default, the priority queue returns the highest priority item first:
 
 ```typescript
-const queue = new PriorityQueue<number>();
+const queue = new PriorityQueue<string>();
 ```
 
 You can create a priority queue that returns the lowest priority item first by passing `true` to the constructor:
 
 ```typescript
-const queue = new PriorityQueue<number>(true);
+const queue = new PriorityQueue<string>(true);
 ```
 
 ### Adding Items
