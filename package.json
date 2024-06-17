@@ -8,6 +8,7 @@
   "description": "A performance-oriented PriorityQueue implementation for javascript",
   "scripts": {
     "build": "bun run build.mjs",
+    "benchmark": "bun run test/bench.ts",
     "prepublishOnly": "bun run build"
   },
   "files": [
@@ -24,8 +25,10 @@
   },
   "bugs": "https://github.com/grinstead/priority-queue/issues",
   "devDependencies": {
-    "bun-plugin-dts": "^0.2.1",
     "@types/bun": "^1.0.0",
+    "bun-plugin-dts": "^0.2.1",
+    "fastpriorityqueue": "^0.7.5",
+    "mitata": "^0.1.11",
     "typescript": "^5.2.2"
   }
 }
