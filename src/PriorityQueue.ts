@@ -45,7 +45,8 @@ export class PriorityQueue<T> {
 
     const { _priorities: priorities, _data: data } = this;
 
-    let i = this.length++;
+    const start = this.length++;
+    let i = start;
 
     // shift data around to make room, note that this will implicitly expand the
     // arrays by writing to the end of them
@@ -55,10 +56,17 @@ export class PriorityQueue<T> {
       i = parentI
     ) {
       priorities[i] = parentPriority;
-      data[i] = data[parentI];
     }
 
     priorities[i] = score;
+
+    // shift data
+    for (let j = start; j > i; ) {
+      const parentI = (j - 1) >> 1;
+      data[j] = data[parentI];
+      j = parentI;
+    }
+
     data[i] = item;
   }
 
@@ -109,6 +117,8 @@ export class PriorityQueue<T> {
 
     let i = 0;
     let childI = 1;
+    let bit = 1;
+    let swapHistory = 0;
     while (childI < maxIndex) {
       // to be in the loop means that childI is not the last index in the array,
       // and so we know it has a sibling next to it.
@@ -118,6 +128,7 @@ export class PriorityQueue<T> {
       // go to the other sibling if it has a higher priority
       if (priorities[childI + 1] > childPriority) {
         childPriority = priorities[++childI];
+        swapHistory |= bit;
       }
 
       // check to see if our popped element should be the parent of these two elements
@@ -129,8 +140,8 @@ export class PriorityQueue<T> {
       } else {
         // move the high-priority child up and continue the loop
         priorities[i] = childPriority;
-        data[i] = data[childI];
 
+        bit <<= 1;
         i = childI;
         childI = (childI << 1) | 1;
       }
@@ -139,11 +150,18 @@ export class PriorityQueue<T> {
     // special case for if we ended the loop at a child without a sibling
     if (childI === maxIndex && priorities[childI] > poppedPriority) {
       priorities[i] = priorities[childI];
-      data[i] = data[childI];
       i = childI;
     }
 
     priorities[i] = poppedPriority;
+
+    // now iterate over the data array
+    for (let j = 0; j < i; swapHistory >>= 1) {
+      const childI = (j << 1) + 1 + (swapHistory & 1);
+      data[j] = data[childI];
+      j = childI;
+    }
+
     data[i] = poppedItem;
 
     return result;
